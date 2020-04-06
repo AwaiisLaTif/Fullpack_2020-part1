@@ -1,9 +1,12 @@
 import React from 'react'
+import Part from './Part.component';
 const Content = (props) => {
     const {parts,exercises}=props;
-    console.log(parts,exercises);
     
-    return ( parts.map((part,index)=> <p> {part} {exercises[index]} </p>));
+    return ( 
+    <div>
+        {parts.map((part,index)=><Part part={part} exercises={exercises[index]}/>)}
+    </div>);
 }
  
 export default Content;
