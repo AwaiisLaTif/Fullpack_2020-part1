@@ -1,11 +1,14 @@
 import React from 'react'
 import Part from './Part.component';
 const Content = (props) => {
-    const {parts,exercises}=props;
+    const {parts}=props;
     
     return ( 
     <div>
-        {parts.map((part,index)=><Part part={part} exercises={exercises[index]}/>)}
+        <Part part={parts[0].name} exercises={parts[0].exercises}/>
+        <Part part={parts[1].name} exercises={parts[1].exercises}/>
+        <Part part={parts[2].name} exercises={parts[2].exercises}/>
+        
     </div>);
 }
  
